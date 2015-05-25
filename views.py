@@ -18,6 +18,7 @@ def adduser(nickname, email):
         db.session.commit()
         return 'add successful'
     except Exception, e:
+        print e
         return 'something go wrong'
 
 @app.route('/getuser/<nickname>')
@@ -25,6 +26,12 @@ def getuser(nickname):
     user = User.query.filter_by(nickname=nickname).first()
     
     return render_template('user.html', user=user)
+
+@app.route('/userlist')
+def userlist():
+    users = User.query.all()
+
+    return render_template('userlist.html', users=users)
 
 @app.errorhandler(404)
 def internal_error(error):

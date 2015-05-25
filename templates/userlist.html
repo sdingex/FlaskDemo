@@ -1,0 +1,24 @@
+<html>
+
+<head>
+
+<title>user</title>
+
+</head>
+
+<body>
+
+<h1>userlist</h1>
+
+<ul>
+{% for user  in users %}
+
+<li>user: {{ user.nickname }}</li>
+
+<li>email: {{ user.email }}</li>
+{% endfor %}
+</ul>
+
+</body>
+
+</html>
