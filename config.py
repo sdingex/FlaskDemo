@@ -6,6 +6,7 @@ SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db')
 SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
 """
 
+# SQLALCHEMY_DATABASE_URI = 'mysql://root:luojiancom@localhost/flaskdb'
 SQLALCHEMY_DATABASE_URI = 'mysql://root:123456@localhost/flaskdb'
 SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
 
